@@ -65,7 +65,7 @@ tarot-flow/
 ├── styles.css      # 样式表
 ├── app.js          # 主应用逻辑
 ├── tarot-data.js   # 塔罗牌数据
-├── images/         # 图片资源
+├── images/         # 图片资源（78张日系治愈风格塔罗牌）
 │   ├── card-back.svg   # 卡牌背面图案
 │   └── *.svg           # 其他卡牌图片
 └── README.md       # 说明文档

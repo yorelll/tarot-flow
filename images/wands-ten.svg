@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200">
+  <defs>
+    <linearGradient id="bg31" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f0ff"/>
+      <stop offset="100%" stop-color="#f6f0ff"/>
+    </linearGradient>
+    <linearGradient id="halo31" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="200" rx="12" fill="url(#bg31)"/>
+  <rect x="4" y="4" width="112" height="192" rx="10" fill="none" stroke="#d8c1a8" stroke-width="1.5"/>
+  <rect x="8" y="8" width="104" height="184" rx="9" fill="url(#halo31)" opacity="0.4"/>
+  <text x="60" y="22" font-size="12" fill="#6b4f4f" text-anchor="middle" font-weight="bold" font-family="sans-serif">杖10</text>
+  <circle cx="60" cy="100" r="36" fill="#ffffff" opacity="0.55"/>
+  <g fill="#aeb9f0" opacity="0.85">
+    <ellipse cx="60" cy="78" rx="8" ry="16" transform="rotate(0 60 100)"/>
+    <ellipse cx="60" cy="78" rx="8" ry="16" transform="rotate(72 60 100)"/>
+    <ellipse cx="60" cy="78" rx="8" ry="16" transform="rotate(144 60 100)"/>
+    <ellipse cx="60" cy="78" rx="8" ry="16" transform="rotate(216 60 100)"/>
+    <ellipse cx="60" cy="78" rx="8" ry="16" transform="rotate(288 60 100)"/>
+    <circle cx="60" cy="100" r="5" fill="#fff8e6"/>
+  </g>
+  <circle cx="60" cy="100" r="24" fill="none" stroke="#aeb9f0" stroke-width="1" opacity="0.6"/>
+  <circle cx="60" cy="100" r="18" fill="none" stroke="#aeb9f0" stroke-width="0.8" opacity="0.5"/>
+  <text x="60" y="165" font-size="12" fill="#5b4b4b" text-anchor="middle" font-weight="bold" font-family="sans-serif">权杖十</text>
+  <text x="60" y="180" font-size="8" fill="#7a6a6a" text-anchor="middle" font-family="sans-serif">Ten of Wands</text>
+</svg>
