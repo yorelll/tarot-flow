@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塔罗牌占卜 - Tarot Flow</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- MediaPipe 库 - 固定版本 -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1640029074/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3.1620248257/drawing_utils.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部标题区域 -->
+        <header class="header">
+            <h1 class="title">✨ 塔罗牌占卜 ✨</h1>
+            <p class="subtitle">用手势控制你的命运</p>
+        </header>
+
+        <!-- 手势指导区域 -->
+        <div class="gesture-guide" role="region" aria-label="手势操作指南">
+            <div class="gesture-item">
+                <span class="gesture-icon" aria-hidden="true">👋</span>
+                <span class="gesture-text">左/右移动选择卡牌</span>
+            </div>
+            <div class="gesture-item">
+                <span class="gesture-icon" aria-hidden="true">✊</span>
+                <span class="gesture-text">握拳确认选择</span>
+            </div>
+            <div class="gesture-item">
+                <span class="gesture-icon" aria-hidden="true">🖐️</span>
+                <span class="gesture-text">五指张开查看牌义</span>
+            </div>
+        </div>
+
+        <!-- 摄像头区域 -->
+        <div class="camera-container">
+            <video id="webcam" autoplay playsinline aria-label="手势识别摄像头画面"></video>
+            <canvas id="gesture-canvas" aria-hidden="true"></canvas>
+            <div class="gesture-status" id="gesture-status" role="status" aria-live="polite">
+                <span class="status-icon" aria-hidden="true">📷</span>
+                <span class="status-text">点击下方按钮开启摄像头</span>
+            </div>
+        </div>
+
+        <!-- 待选卡牌区域 -->
+        <div class="deck-area" role="region" aria-label="待选卡牌区域">
+            <h2 class="section-title">🎴 选择你的塔罗牌</h2>
+            <div class="card-deck" id="card-deck" role="listbox" aria-label="塔罗牌列表">
+                <!-- 卡牌将通过 JavaScript 动态生成 -->
+            </div>
+            <div class="selection-indicator" id="selection-indicator">
+                <div class="indicator-arrow">▼</div>
+            </div>
+        </div>
+
+        <!-- 已选卡牌区域 -->
+        <div class="selected-area">
+            <h2 class="section-title">🔮 你选择的卡牌</h2>
+            <div class="selected-cards" id="selected-cards">
+                <div class="empty-slot" data-slot="1">
+                    <span class="slot-number">1</span>
+                    <span class="slot-label">过去</span>
+                </div>
+                <div class="empty-slot" data-slot="2">
+                    <span class="slot-number">2</span>
+                    <span class="slot-label">现在</span>
+                </div>
+                <div class="empty-slot" data-slot="3">
+                    <span class="slot-number">3</span>
+                    <span class="slot-label">未来</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 牌义展示区域 -->
+        <div class="meaning-modal" id="meaning-modal">
+            <div class="meaning-content">
+                <button class="close-btn" id="close-meaning">×</button>
+                <div class="meaning-card-image" id="meaning-card-image"></div>
+                <h3 class="meaning-title" id="meaning-title">卡牌名称</h3>
+                <div class="meaning-text" id="meaning-text">
+                    <p>卡牌含义将在这里显示...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 控制按钮区域 -->
+        <div class="controls" role="group" aria-label="控制按钮">
+            <button class="control-btn reset-btn" id="reset-btn" aria-label="重新开始游戏">
+                <span aria-hidden="true">🔄</span> 重新开始
+            </button>
+            <button class="control-btn camera-btn" id="camera-btn" aria-label="开启或关闭摄像头">
+                <span aria-hidden="true">📷</span> 开启摄像头
+            </button>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>✨ Tarot Flow - 让命运在你指尖流转 ✨</p>
+        </footer>
+    </div>
+
+    <script src="tarot-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

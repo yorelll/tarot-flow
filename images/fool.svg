@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200">
+  <defs>
+    <linearGradient id="foolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f4e8"/>
+      <stop offset="100%" style="stop-color:#e8dcc8"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="200" rx="10" fill="url(#foolGrad)"/>
+  <rect x="3" y="3" width="114" height="194" rx="8" fill="none" stroke="#c9a227" stroke-width="2"/>
+  <text x="60" y="25" font-size="14" fill="#2d1b4e" text-anchor="middle" font-weight="bold">0</text>
+  <circle cx="60" cy="90" r="35" fill="#9b59b6" opacity="0.3"/>
+  <text x="60" y="100" font-size="40" text-anchor="middle">🃏</text>
+  <text x="60" y="160" font-size="12" fill="#2d1b4e" text-anchor="middle" font-weight="bold">愚者</text>
+  <text x="60" y="175" font-size="8" fill="#666" text-anchor="middle">The Fool</text>
+</svg>
