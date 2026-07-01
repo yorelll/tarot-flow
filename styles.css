@@ -3,6 +3,7 @@
    ===================================================== */
 
 /* CSS 变量定义 - 神秘紫金配色 */
+;
 :root {
     --primary-color: #2d1b4e;
     --secondary-color: #1a0f2e;
@@ -42,7 +43,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 30%, rgba(201, 162, 39, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 80% 70%, rgba(201, 162, 39, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.05) 0%, transparent 60%);
@@ -58,7 +59,7 @@ body::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
         radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
         radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
@@ -315,7 +316,7 @@ body::after {
     height: 90%;
     border: 1px solid var(--card-border);
     border-radius: 8px;
-    background: 
+    background:
         linear-gradient(45deg, transparent 45%, var(--card-border) 45%, var(--card-border) 55%, transparent 55%),
         linear-gradient(-45deg, transparent 45%, var(--card-border) 45%, var(--card-border) 55%, transparent 55%);
     background-size: 20px 20px;
@@ -473,11 +474,11 @@ body::after {
 }
 
 @keyframes slideUp {
-    from { 
+    from {
         opacity: 0;
         transform: translateY(50px);
     }
-    to { 
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -609,33 +610,33 @@ body::after {
     .title {
         font-size: 2rem;
     }
-    
+
     .gesture-guide {
         gap: 20px;
     }
-    
+
     .gesture-item {
         padding: 8px 15px;
     }
-    
+
     .tarot-card {
         width: 100px;
         height: 166px;
     }
-    
+
     .empty-slot, .selected-card-wrapper {
         width: 100px;
         height: 166px;
     }
-    
+
     .card-deck {
         gap: 10px;
     }
-    
+
     .selected-cards {
         gap: 20px;
     }
-    
+
     .camera-container {
         width: 280px;
         height: 210px;
@@ -646,17 +647,17 @@ body::after {
     .title {
         font-size: 1.5rem;
     }
-    
+
     .gesture-guide {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .tarot-card {
         width: 80px;
         height: 133px;
     }
-    
+
     .empty-slot, .selected-card-wrapper {
         width: 80px;
         height: 133px;
